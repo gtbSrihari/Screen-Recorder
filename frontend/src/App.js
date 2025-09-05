@@ -82,7 +82,6 @@ export default function App() {
     try {
       const res = await fetch(API_URL, { method: "POST", body: fd });
       if (!res.ok) throw new Error("Upload failed");
-      const json = await res.json();
       alert("Upload successful");
       fetchRecordings();
     } catch (e) {
